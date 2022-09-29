@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>5 Teman Terbaik</title>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<style type="text/css">
+	table{
+	font-family: sans-serif;
+	color: black;
+	border-collapse: collapse;
+	width: 100px;
+	border: 1px solid #f2f5f7;
+	background: rgb(45, 89, 129);
+	
+}
+	table tr th {
+	background: rgb(55, 0, 255);
+	color: white;
+	font-weight: normal;
+}
+
+	table, th, td {
+	padding: 8px 20px;
+	text-align: center;
+	
+
+}
+
+	table td:hover{
+	background-color: rgb(139, 128, 240);
+
+}
+	body{
+		background: lightgrey;
+	}
+    
+</style>
+</head>
+<body>
+	<h1 align="center">5 TEMAN STMIK IKMI CIREBON</h1>
+	<table class="tabelku">
+
+<table class="tabelku" border="2" align="center">
+  <tr>
+  	<th>No</th>
+  	<th>Nama</th>
+  	<th>Alamat</th>
+  	<th>Aksi</th>
+  </tr>
+
+  <tr id="row__1">
+  	<td>1</td>
+  	<td class="nama_mhs">Syaeful Annas</td>
+  	<td class="Alamat_mhs">Cirebon</td>
+  	<td class="Hapus" id="Hapus__1">Hapus</td>
+  </tr>
+
+  <tr id="row__2">
+  	<td>2</td>
+  	<td class="nama_mhs">Sigit Saputra</td>
+  	<td class="Alamat_mhs">Cirebon</td>
+  	<td class="Hapusi" id="Hapus__2">Hapus</td>
+  </tr>
+
+  <tr id="row__3">
+  	<td>3</td>
+  	<td class="nama_mhs">Widisa Adi</td>
+  	<td class="Alamat_mhs">Indramayu</td>
+  	<td class="Hapus" id="Hapus__3">Hapus</td>
+  </tr>
+
+  <tr id="row__4">
+  	<td>4</td>
+  	<td class="nama_mhs">Umar Rakhman</td>
+  	<td class="Alamat_mhs">Indramayu</td>
+  	<td class="Hapus" id="Hapus__4">Hapus</td>
+  </tr>
+
+   <tr id="row__5">
+  	<td>5</td>
+  	<td class="nama_mhs">Ibnu Syna Salman</td>
+  	<td class="Alamat_mhs">Cirebon</td>
+  	<td class="Hapus" id="Hapus__5">Hapus</td>
+  </tr>
+	
+</table>
+</body>
+</html>
+<div class="tombol-back-teman-css" align="center" width="100">
+	<br>
+        <button>
+        <a onclick="alert('kamu mau kembali?')" href="https://xxxyufa69.github.io/">
+            Back to Home</a>
+
+<script>
+	$(document).ready(function(){
+		//alert(0)
+		$('.nama_mhs').click(function(){
+			//alert(1)
+			let isi = $(this).text();
+			//alert(isi);
+			let isi2 = prompt('ubah dengan:, isi');
+			if(!isi2) return;
+			//alert(isi2);
+
+			$(this).text(isi2);
+		})
+
+		$('.Hapus').click(function(){
+			//alert(1)
+			let yakin = confirm('yakin ingin menghapus?');
+			if(!yakin) return;
+
+			let id = $(this).prop('id');
+			//alert(id);
+
+			let rid = id.split('__');
+			let baris_ke = rid[1];
+
+			//alert(baris_ke);
+
+            $('#row__'+baris_ke).fadeOut();
+
+			//alert('Anda yakin')
+		})
+
+		$('.Alamat_mhs').click(function(){
+			//alert(1)
+			let isi = $(this).text();
+			//alert(isi);
+			let isi2 = prompt('ubah dengan:, isi');
+			if(!isi2) return;
+			//alert(isi2);
+			$(this).text(isi2);
+
+		})
+	})
+</script>
